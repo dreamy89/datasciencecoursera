@@ -1,0 +1,19 @@
+---
+title: "Developing Data Products - R Markdown and Leaflet"
+date: "15 May 2018"
+---
+
+## Developing Data Products - R Markdown and Leaflet
+
+#### Create a web page using R Markdown that features a map created with Leaflet
+```{r, warning=FALSE}
+library(leaflet)
+```
+
+```{r, warning=FALSE}
+# Create map for the Sydney Opera House -33.856764, 151.215298
+Map <- leaflet() %>%
+  addTiles() %>%   
+  addMarkers(lng=-33.856764, lat=151.215298, popup="The famous Sydney Opera House! https://www.sydneyoperahouse.com")
+Map
+```
